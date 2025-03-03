@@ -17,6 +17,9 @@ OVERWRITE_CLASS = False  # Set to True to overwrite existing uses
 RETRY_ATTEMPTS = 5  # Number of retry attempts for MongoDB operations
 RETRY_DELAY = 5  # Delay between retry attempts in seconds
 
+MONGO_URI = os.getenv('MONGO_URI') # mongodb://localhost:27017
+OLLAMA_MODEL = os.getenv('OLLAMA_MODEL') # granite3.1-dense:8b
+
 # Set up logging
 if LOGGING:
     logging.basicConfig(filename='progress.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -35,8 +38,7 @@ class Asteroid(BaseModel):
       raise ValueError("Class must be one of 'C', 'S', 'M' or 'O'")
     return v
 
-MONGO_URI = os.getenv('MONGO_URI') # mongodb://localhost:27017
-OLLAMA_MODEL = os.getenv('OLLAMA_MODEL') # granite3.1-dense:8b
+
 data = []
 
 if MONGO_URI:
