@@ -13,7 +13,7 @@ This script reads element data from a JSON file, validates the data using Pydant
 #### Capabilities:
 - Reads element data from `elements.json`.
 - Uses Pydantic models to validate element data.
-- Validates that the `classes` field includes "C", "S", and "M" with percentages summing to 100.
+- Validates that the `classes` field includes "C", "S", and "M"
 - Updates the `uses` and `classes` fields in the JSON file.
 - Debugging support with color-coded output using `colorama`.
 
@@ -24,7 +24,7 @@ This script reads element data from a MongoDB collection, validates the data usi
 #### Capabilities:
 - Connects to a MongoDB database using a URI from environment variables.
 - Uses Pydantic models to validate element data.
-- Validates that the `classes` field includes "C", "S", and "M" with percentages summing to 100.
+- Validates that the `classes` field includes "C", "S", and "M"
 - Updates the `uses` and `classes` fields in MongoDB documents.
 - Debugging support with color-coded output using `colorama`.
 
