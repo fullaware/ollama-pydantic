@@ -1,9 +1,10 @@
 import os
 import logging
+import time
 from pydantic import BaseModel, field_validator, ValidationError
 from ollama import Client
 from colorama import Fore, Style, init
-from pymongo import MongoClient
+from pymongo import MongoClient, errors
 from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from .env file
@@ -13,6 +14,8 @@ init(autoreset=True)  # Initialize colorama
 DEBUG = True  # Set to False to turn off debug printing
 LOGGING = False  # Set to True to enable logging to progress.log
 OVERWRITE_CLASS = False  # Set to True to overwrite existing uses
+RETRY_ATTEMPTS = 5  # Number of retry attempts for MongoDB operations
+RETRY_DELAY = 5  # Delay between retry attempts in seconds
 
 # Set up logging
 if LOGGING:
@@ -28,11 +31,12 @@ class Asteroid(BaseModel):
 
   @field_validator('class_')
   def validate_class(cls, v):
-    if v not in {"C", "S", "M"}:
-      raise ValueError("Class must be one of 'C', 'S', or 'M'")
+    if v not in {"C", "S", "M", "O"}:
+      raise ValueError("Class must be one of 'C', 'S', 'M' or 'O'")
     return v
 
-MONGO_URI = os.getenv('MONGO_URI')
+MONGO_URI = os.getenv('MONGO_URI') # mongodb://localhost:27017
+OLLAMA_MODEL = os.getenv('OLLAMA_MODEL') # granite3.1-dense:8b
 data = []
 
 if MONGO_URI:
@@ -69,10 +73,10 @@ for asteroid in data:
           messages=[
             {
               'role': 'user',
-              'content': f'Respond in JSON with only one of the following letters C, S, or M. These are the possible class of asteroid {asteroid["name"]}.',
+              'content': f'Respond in JSON with only one of the following letters C, S, M or O. These are the possible class of asteroid {asteroid["name"]}.',
             }
           ],
-          model='granite3.1-dense:8b',
+          model=OLLAMA_MODEL,
           format=Asteroid.model_json_schema(),
         )
         try:
@@ -80,7 +84,7 @@ for asteroid in data:
             asteroid_class = validated.class_
 
             # Check if the class is valid
-            if asteroid_class in {"C", "S", "M"}:
+            if asteroid_class in {"C", "S", "M", "O"}:
                 if DEBUG:
                     counter += 1
                     message = f"Accepted: {validated}"
@@ -88,11 +92,21 @@ for asteroid in data:
                     if LOGGING:
                         logging.debug(message)
                 
-                # Embed the class in matching JSON objects
-                collection.update_one(
-                    {"name": asteroid["name"], "class": {"$exists": False}},
-                    {"$set": {"class": asteroid_class}}
-                )
+                # Embed the class in matching JSON objects with retry mechanism
+                for attempt in range(RETRY_ATTEMPTS):
+                    try:
+                        collection.update_one(
+                            {"name": asteroid["name"], "class": {"$exists": False}},
+                            {"$set": {"class": asteroid_class}}
+                        )
+                        break  # Exit the loop if the update is successful
+                    except errors.AutoReconnect as e:
+                        if attempt < RETRY_ATTEMPTS - 1:
+                            if DEBUG:
+                                print(Fore.YELLOW + f"Retrying ({attempt + 1}/{RETRY_ATTEMPTS}) due to: {e}")
+                            time.sleep(RETRY_DELAY)
+                        else:
+                            raise
 
                 break  # Exit the loop if the class is valid
             else:
