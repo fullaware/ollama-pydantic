@@ -49,7 +49,7 @@ for asteroid in data:
           messages=[
             {
               'role': 'user',
-              'content': f'Respond in JSON with only one of the following letters C (Carbonaceaus), S (Silicate), M (Metallic) or O (Other, unclassified). These are the possible class of asteroid {asteroid["name"]}.',
+              'content': f'Respond in JSON with only one of the following letters C, S, M or O. These are the possible class of asteroid {asteroid["name"]}.',
             }
           ],
           model='granite3.1-dense:8b',
