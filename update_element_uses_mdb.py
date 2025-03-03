@@ -1,4 +1,6 @@
-import json
+# Description: This script uses the Ollama API to update the uses of elements in a MongoDB database.
+#
+
 import os
 from pydantic import BaseModel
 from ollama import Client

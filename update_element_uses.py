@@ -1,3 +1,6 @@
+# Description: This script reads the elements.json file and prompts the user to input the uses and classes of each element. The user input is validated against the Element model and the data is updated in the elements.json file.
+#
+# The script uses the Ollama API to prompt the user for input and the Pydantic library to validate the user input. The Element model defines the structure of the data for each element, including the element name, atomic number, uses, and classes. The script reads the elements.json file, prompts the user for input, validates the input, and updates the data in the elements.json file.
 import json
 from pydantic import BaseModel, field_validator, ValidationError
 from ollama import Client

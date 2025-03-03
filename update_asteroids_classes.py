@@ -1,11 +1,10 @@
-import json
+# Description: This script uses the Ollama API to classify asteroids based on their names.
 import os
 from pydantic import BaseModel, field_validator, ValidationError
 from ollama import Client
 from colorama import Fore, Style, init
 from pymongo import MongoClient
 from dotenv import load_dotenv
-import decimal
 
 load_dotenv()  # Load environment variables from .env file
 
