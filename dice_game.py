@@ -1,9 +1,9 @@
 import random
 
 from pydantic_ai import Agent, RunContext
-from pydantic_ai.models import OllamaModel
+from pydantic_ai.models.openai import OpenAIModel
 
-ollama_model = OllamaModel(
+ollama_model = OpenAIModel(
     model_name='llama3.1:8b',  
     base_url='http://10.28.28.20:11434/v1',  
 )

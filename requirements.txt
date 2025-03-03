@@ -5,3 +5,4 @@ pydantic-ai-slim
 pydantic_core
 pymongo
 dotenv
+pydantic_ai
