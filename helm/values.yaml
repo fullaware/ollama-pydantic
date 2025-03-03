@@ -3,6 +3,8 @@ image:
   repository: fullaware/ollama-pydantic
   tag: latest
   pullPolicy: Always
+service:
+  type: LoadBalancer
 
 # MongoDB configuration
 mongodb:
@@ -10,7 +12,7 @@ mongodb:
     rootPassword: Candy123
     username: root
     password: Candy123
-    database: asteroidmining_db
+    database: asteroids
   primary:
     persistence:
       enabled: true
