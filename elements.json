@@ -43,9 +43,15 @@
     "block": "s",
     "uses": [
       "fuel",
-      "propulsion",
-      "industrial"
-    ]
+      "energystorage",
+      "industrial",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 50,
+      "M": 80
+    }
   },
   {
     "name": "Helium",
@@ -91,12 +97,20 @@
     },
     "block": "s",
     "uses": [
+      "fuel",
       "lifesupport",
+      "energystorage",
       "electronics",
       "coolants",
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 50
+    }
   },
   {
     "name": "Lithium",
@@ -148,7 +162,12 @@
       "electronics",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 50,
+      "M": 80
+    }
   },
   {
     "name": "Beryllium",
@@ -197,10 +216,16 @@
     },
     "block": "s",
     "uses": [
+      "electronics",
       "industrial",
       "construction",
-      "electronics"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 15,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Boron",
@@ -251,9 +276,13 @@
     "block": "p",
     "uses": [
       "industrial",
-      "construction",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Carbon",
@@ -305,10 +334,16 @@
     "block": "p",
     "uses": [
       "construction",
-      "industrial",
       "electronics",
-      "agriculture"
-    ]
+      "industrial",
+      "fuel",
+      "medical"
+    ],
+    "classes": {
+      "C": 80,
+      "S": 50,
+      "M": 20
+    }
   },
   {
     "name": "Nitrogen",
@@ -360,9 +395,16 @@
     },
     "block": "p",
     "uses": [
+      "lifesupport",
+      "agriculture",
       "industrial",
-      "agriculture"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 30,
+      "M": 60
+    }
   },
   {
     "name": "Oxygen",
@@ -416,10 +458,16 @@
     "block": "p",
     "uses": [
       "lifesupport",
+      "fuel",
+      "energystorage",
       "industrial",
-      "medical",
-      "propulsion"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 40,
+      "M": 60
+    }
   },
   {
     "name": "Fluorine",
@@ -475,10 +523,13 @@
     "uses": [
       "industrial",
       "medical",
-      "construction",
-      "electronics",
-      "propulsion"
-    ]
+      "electronics"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Neon",
@@ -534,9 +585,13 @@
     "block": "p",
     "uses": [
       "electronics",
-      "industrial",
-      "coolants"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Sodium",
@@ -594,9 +649,14 @@
     "block": "s",
     "uses": [
       "lifesupport",
-      "industrial",
-      "construction"
-    ]
+      "medical",
+      "industrial"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 90
+    }
   },
   {
     "name": "Magnesium",
@@ -657,8 +717,13 @@
       "industrial",
       "construction",
       "electronics",
-      "medical"
-    ]
+      "energystorage"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 60,
+      "M": 70
+    }
   },
   {
     "name": "Aluminium",
@@ -718,11 +783,15 @@
     "block": "p",
     "uses": [
       "construction",
-      "industrial",
       "electronics",
-      "propulsion",
-      "coolants"
-    ]
+      "industrial",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 80,
+      "S": 60,
+      "M": 40
+    }
   },
   {
     "name": "Silicon",
@@ -782,10 +851,15 @@
     },
     "block": "p",
     "uses": [
+      "construction",
       "electronics",
-      "industrial",
-      "construction"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 80,
+      "S": 50,
+      "M": 20
+    }
   },
   {
     "name": "Phosphorus",
@@ -846,11 +920,15 @@
     },
     "block": "p",
     "uses": [
+      "lifesupport",
       "industrial",
-      "agriculture",
-      "medical",
-      "energystorage"
-    ]
+      "agriculture"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 40
+    }
   },
   {
     "name": "Sulfur",
@@ -913,8 +991,14 @@
     "block": "p",
     "uses": [
       "industrial",
-      "agriculture"
-    ]
+      "agriculture",
+      "mining"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 90
+    }
   },
   {
     "name": "Chlorine",
@@ -978,9 +1062,13 @@
     "block": "p",
     "uses": [
       "industrial",
-      "medical",
       "agriculture"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 40,
+      "M": 80
+    }
   },
   {
     "name": "Argon",
@@ -1044,10 +1132,15 @@
     },
     "block": "p",
     "uses": [
+      "lifesupport",
       "industrial",
-      "electronics",
-      "shielding"
-    ]
+      "coolants"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 20,
+      "M": 40
+    }
   },
   {
     "name": "Potassium",
@@ -1113,10 +1206,15 @@
     },
     "block": "s",
     "uses": [
-      "agriculture",
+      "industrial",
       "medical",
-      "industrial"
-    ]
+      "agriculture"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 80
+    }
   },
   {
     "name": "Calcium",
@@ -1186,7 +1284,12 @@
       "construction",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 15,
+      "S": 30,
+      "M": 60
+    }
   },
   {
     "name": "Scandium",
@@ -1256,7 +1359,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 95
+    }
   },
   {
     "name": "Titanium",
@@ -1325,11 +1433,15 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
       "construction",
       "electronics",
-      "medical"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Vanadium",
@@ -1399,11 +1511,15 @@
     },
     "block": "d",
     "uses": [
-      "fuel",
-      "construction",
       "industrial",
-      "energystorage"
-    ]
+      "electronics",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 10,
+      "M": 50
+    }
   },
   {
     "name": "Chromium",
@@ -1476,7 +1592,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 0,
+      "S": 50,
+      "M": 75
+    }
   },
   {
     "name": "Manganese",
@@ -1551,7 +1672,12 @@
       "industrial",
       "construction",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 30,
+      "M": 60
+    }
   },
   {
     "name": "Iron",
@@ -1626,8 +1752,14 @@
     "uses": [
       "construction",
       "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 100,
+      "S": 95,
+      "M": 80
+    }
   },
   {
     "name": "Cobalt",
@@ -1701,10 +1833,15 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
+      "energystorage",
       "electronics",
-      "propulsion"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 60,
+      "M": 80
+    }
   },
   {
     "name": "Nickel",
@@ -1781,8 +1918,13 @@
     "uses": [
       "industrial",
       "electronics",
-      "propulsion"
-    ]
+      "fuel"
+    ],
+    "classes": {
+      "C": 30,
+      "S": 50,
+      "M": 70
+    }
   },
   {
     "name": "Copper",
@@ -1861,7 +2003,12 @@
       "electronics",
       "industrial",
       "construction"
-    ]
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 10
+    }
   },
   {
     "name": "Zinc",
@@ -1932,7 +2079,12 @@
       "industrial",
       "construction",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 25,
+      "S": 75,
+      "M": 100
+    }
   },
   {
     "name": "Gallium",
@@ -1985,7 +2137,12 @@
     "uses": [
       "electronics",
       "industrial"
-    ]
+    ],
+    "classes": {
+      "C": 50,
+      "S": 20,
+      "M": 75
+    }
   },
   {
     "name": "Germanium",
@@ -2038,8 +2195,14 @@
     "block": "p",
     "uses": [
       "electronics",
-      "industrial"
-    ]
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 90
+    }
   },
   {
     "name": "Arsenic",
@@ -2093,8 +2256,13 @@
     "block": "p",
     "uses": [
       "industrial",
-      "agriculture"
-    ]
+      "mining"
+    ],
+    "classes": {
+      "C": 80,
+      "S": 70,
+      "M": 60
+    }
   },
   {
     "name": "Selenium",
@@ -2151,7 +2319,12 @@
       "electronics",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 80
+    }
   },
   {
     "name": "Bromine",
@@ -2208,8 +2381,14 @@
     "uses": [
       "industrial",
       "medical",
-      "coolants"
-    ]
+      "propulsion",
+      "shielding"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 40,
+      "M": 60
+    }
   },
   {
     "name": "Krypton",
@@ -2287,9 +2466,13 @@
     "block": "p",
     "uses": [
       "electronics",
-      "industrial",
-      "propulsion"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 25,
+      "M": 40
+    }
   },
   {
     "name": "Rubidium",
@@ -2348,8 +2531,13 @@
     "block": "s",
     "uses": [
       "electronics",
-      "industrial"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 20
+    }
   },
   {
     "name": "Strontium",
@@ -2409,10 +2597,13 @@
     "block": "s",
     "uses": [
       "industrial",
-      "construction",
-      "electronics",
-      "coolants"
-    ]
+      "construction"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 60,
+      "M": 70
+    }
   },
   {
     "name": "Yttrium",
@@ -2472,10 +2663,13 @@
     },
     "block": "d",
     "uses": [
-      "electronics",
-      "industrial",
-      "medical"
-    ]
+      "electronics"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 50,
+      "M": 100
+    }
   },
   {
     "name": "Zirconium",
@@ -2529,11 +2723,15 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
       "construction",
-      "medical",
-      "propulsion"
-    ]
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 10,
+      "M": 20
+    }
   },
   {
     "name": "Niobium",
@@ -2589,9 +2787,13 @@
     "block": "d",
     "uses": [
       "industrial",
-      "electronics",
-      "construction"
-    ]
+      "electronics"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 80
+    }
   },
   {
     "name": "Molybdenum",
@@ -2672,7 +2874,12 @@
       "industrial",
       "electronics",
       "propulsion"
-    ]
+    ],
+    "classes": {
+      "C": 50,
+      "S": 60,
+      "M": 70
+    }
   },
   {
     "name": "Technetium",
@@ -2723,9 +2930,14 @@
     },
     "block": "d",
     "uses": [
-      "medical",
-      "industrial"
-    ]
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Ruthenium",
@@ -2776,9 +2988,14 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Rhodium",
@@ -2830,8 +3047,14 @@
     "block": "d",
     "uses": [
       "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Palladium",
@@ -2884,7 +3107,12 @@
       "electronics",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 35,
+      "M": 50
+    }
   },
   {
     "name": "Silver",
@@ -2938,7 +3166,12 @@
       "electronics",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 20
+    }
   },
   {
     "name": "Cadmium",
@@ -2991,7 +3224,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Indium",
@@ -3044,8 +3282,14 @@
     "block": "p",
     "uses": [
       "electronics",
-      "industrial"
-    ]
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Tin",
@@ -3098,10 +3342,14 @@
     },
     "block": "p",
     "uses": [
-      "construction",
-      "electronics",
-      "industrial"
-    ]
+      "industrial",
+      "electronics"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Antimony",
@@ -3157,7 +3405,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 40
+    }
   },
   {
     "name": "Tellurium",
@@ -3214,7 +3467,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 30,
+      "S": 40,
+      "M": 70
+    }
   },
   {
     "name": "Iodine",
@@ -3266,9 +3524,14 @@
     "block": "p",
     "uses": [
       "medical",
-      "lifesupport",
-      "industrial"
-    ]
+      "industrial",
+      "agriculture"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Xenon",
@@ -3321,9 +3584,13 @@
     "uses": [
       "propulsion",
       "electronics",
-      "medical",
-      "industrial"
-    ]
+      "coolants"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Cesium",
@@ -3376,9 +3643,13 @@
     "block": "s",
     "uses": [
       "electronics",
-      "industrial",
-      "propulsion"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Barium",
@@ -3430,9 +3701,15 @@
     },
     "block": "s",
     "uses": [
+      "medical",
       "industrial",
-      "medical"
-    ]
+      "construction"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 20,
+      "M": 80
+    }
   },
   {
     "name": "Lanthanum",
@@ -3486,10 +3763,15 @@
     },
     "block": "f",
     "uses": [
-      "industrial",
       "electronics",
-      "medical"
-    ]
+      "industrial",
+      "energystorage"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 40,
+      "M": 80
+    }
   },
   {
     "name": "Cerium",
@@ -3546,7 +3828,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Praseodymium",
@@ -3600,9 +3887,14 @@
     },
     "block": "f",
     "uses": [
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Neodymium",
@@ -3656,9 +3948,13 @@
     "block": "f",
     "uses": [
       "electronics",
-      "industrial",
-      "energystorage"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 35,
+      "M": 45
+    }
   },
   {
     "name": "Promethium",
@@ -3712,8 +4008,15 @@
     "block": "f",
     "uses": [
       "fuel",
-      "electronics"
-    ]
+      "energystorage",
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 50,
+      "M": 90
+    }
   },
   {
     "name": "Samarium",
@@ -3769,7 +4072,12 @@
       "industrial",
       "electronics",
       "propulsion"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Europium",
@@ -3823,8 +4131,13 @@
     "block": "f",
     "uses": [
       "electronics",
-      "industrial"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Gadolinium",
@@ -3878,9 +4191,14 @@
     "block": "f",
     "uses": [
       "medical",
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Terbium",
@@ -3933,10 +4251,13 @@
     },
     "block": "f",
     "uses": [
-      "electronics",
-      "industrial",
-      "energystorage"
-    ]
+      "electronics"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 40,
+      "M": 70
+    }
   },
   {
     "name": "Dysprosium",
@@ -3993,7 +4314,12 @@
       "electronics",
       "propulsion",
       "coolants"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 35,
+      "M": 70
+    }
   },
   {
     "name": "Holmium",
@@ -4048,7 +4374,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 5,
+      "S": 10,
+      "M": 20
+    }
   },
   {
     "name": "Erbium",
@@ -4101,9 +4432,14 @@
     },
     "block": "f",
     "uses": [
-      "electronics",
-      "industrial"
-    ]
+      "industrial",
+      "electronics"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 20,
+      "M": 75
+    }
   },
   {
     "name": "Thulium",
@@ -4156,9 +4492,14 @@
     },
     "block": "f",
     "uses": [
-      "electronics",
-      "industrial"
-    ]
+      "industrial",
+      "electronics"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 50
+    }
   },
   {
     "name": "Ytterbium",
@@ -4211,9 +4552,14 @@
     },
     "block": "f",
     "uses": [
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 15,
+      "S": 25,
+      "M": 40
+    }
   },
   {
     "name": "Lutetium",
@@ -4267,9 +4613,14 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 1
+    }
   },
   {
     "name": "Hafnium",
@@ -4324,7 +4675,12 @@
     "uses": [
       "industrial",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 10
+    }
   },
   {
     "name": "Tantalum",
@@ -4378,7 +4734,12 @@
       "electronics",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 40,
+      "M": 80
+    }
   },
   {
     "name": "Tungsten",
@@ -4430,9 +4791,14 @@
     "block": "d",
     "uses": [
       "industrial",
-      "construction",
-      "electronics"
-    ]
+      "electronics",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 80
+    }
   },
   {
     "name": "Rhenium",
@@ -4486,8 +4852,14 @@
     "block": "d",
     "uses": [
       "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Osmium",
@@ -4538,9 +4910,16 @@
     },
     "block": "d",
     "uses": [
+      "electronics",
       "industrial",
-      "electronics"
-    ]
+      "propulsion",
+      "shielding"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Iridium",
@@ -4591,9 +4970,14 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Platinum",
@@ -4644,10 +5028,16 @@
     },
     "block": "d",
     "uses": [
-      "electronics",
       "industrial",
-      "medical"
-    ]
+      "electronics",
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 20
+    }
   },
   {
     "name": "Gold",
@@ -4698,9 +5088,14 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
-      "electronics"
-    ]
+      "electronics",
+      "industrial"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 20
+    }
   },
   {
     "name": "Mercury",
@@ -4755,7 +5150,12 @@
       "electronics",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 25,
+      "S": 35,
+      "M": 40
+    }
   },
   {
     "name": "Thallium",
@@ -4807,9 +5207,13 @@
     },
     "block": "p",
     "uses": [
-      "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 2
+    }
   },
   {
     "name": "Lead",
@@ -4864,11 +5268,15 @@
     "block": "p",
     "uses": [
       "industrial",
-      "shielding",
-      "construction",
       "electronics",
-      "medical"
-    ]
+      "shielding",
+      "mining"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 90
+    }
   },
   {
     "name": "Bismuth",
@@ -4924,8 +5332,15 @@
     "block": "p",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "electronics",
+      "coolants"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 25,
+      "M": 75
+    }
   },
   {
     "name": "Polonium",
@@ -4975,9 +5390,14 @@
     },
     "block": "p",
     "uses": [
-      "propulsion",
-      "industrial"
-    ]
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 5,
+      "M": 2
+    }
   },
   {
     "name": "Astatine",
@@ -5028,7 +5448,12 @@
     "block": "p",
     "uses": [
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Radon",
@@ -5079,8 +5504,14 @@
     "block": "p",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "shielding"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 20
+    }
   },
   {
     "name": "Francium",
@@ -5133,7 +5564,12 @@
     "uses": [
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 95
+    }
   },
   {
     "name": "Radium",
@@ -5185,9 +5621,13 @@
     },
     "block": "s",
     "uses": [
-      "medical",
-      "industrial"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 10,
+      "M": 20
+    }
   },
   {
     "name": "Actinium",
@@ -5239,9 +5679,14 @@
     },
     "block": "f",
     "uses": [
-      "industrial",
-      "medical"
-    ]
+      "medical",
+      "industrial"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 10
+    }
   },
   {
     "name": "Thorium",
@@ -5296,9 +5741,16 @@
     "block": "f",
     "uses": [
       "fuel",
+      "energystorage",
       "industrial",
-      "energystorage"
-    ]
+      "propulsion",
+      "shielding"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 35,
+      "M": 60
+    }
   },
   {
     "name": "Protactinium",
@@ -5351,7 +5803,12 @@
     "uses": [
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 20
+    }
   },
   {
     "name": "Uranium",
@@ -5404,10 +5861,15 @@
     "block": "f",
     "uses": [
       "fuel",
-      "energystorage",
+      "industrial",
       "propulsion",
-      "industrial"
-    ]
+      "shielding"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 70,
+      "M": 80
+    }
   },
   {
     "name": "Neptunium",
@@ -5458,11 +5920,14 @@
     },
     "block": "f",
     "uses": [
-      "fuel",
       "industrial",
-      "propulsion",
-      "shielding"
-    ]
+      "energystorage"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 2,
+      "M": 10
+    }
   },
   {
     "name": "Plutonium",
@@ -5517,7 +5982,12 @@
       "propulsion",
       "industrial",
       "shielding"
-    ]
+    ],
+    "classes": {
+      "C": 15,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Americium",
@@ -5569,10 +6039,14 @@
     "block": "f",
     "uses": [
       "energystorage",
-      "propulsion",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 70
+    }
   },
   {
     "name": "Curium",
@@ -5623,11 +6097,16 @@
     },
     "block": "f",
     "uses": [
-      "fuel",
       "propulsion",
+      "energystorage",
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 10,
+      "S": 5,
+      "M": 25
+    }
   },
   {
     "name": "Berkelium",
@@ -5678,9 +6157,14 @@
     },
     "block": "f",
     "uses": [
-      "propulsion",
-      "industrial"
-    ]
+      "industrial",
+      "medical"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 25,
+      "M": 50
+    }
   },
   {
     "name": "Californium",
@@ -5732,8 +6216,14 @@
     "block": "f",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 20
+    }
   },
   {
     "name": "Einsteinium",
@@ -5785,8 +6275,14 @@
     "block": "f",
     "uses": [
       "industrial",
+      "medical",
       "propulsion"
-    ]
+    ],
+    "classes": {
+      "C": 0,
+      "S": 25,
+      "M": 75
+    }
   },
   {
     "name": "Fermium",
@@ -5838,8 +6334,14 @@
     "block": "f",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 20,
+      "M": 75
+    }
   },
   {
     "name": "Mendelevium",
@@ -5890,10 +6392,14 @@
     },
     "block": "f",
     "uses": [
-      "propulsion",
       "industrial",
-      "medical"
-    ]
+      "propulsion"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Nobelium",
@@ -5945,8 +6451,15 @@
     "block": "f",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "electronics",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 1
+    }
   },
   {
     "name": "Lawrencium",
@@ -5998,8 +6511,14 @@
     "block": "d",
     "uses": [
       "industrial",
+      "medical",
       "propulsion"
-    ]
+    ],
+    "classes": {
+      "C": 5,
+      "S": 10,
+      "M": 20
+    }
   },
   {
     "name": "Rutherfordium",
@@ -6051,8 +6570,14 @@
     "block": "d",
     "uses": [
       "industrial",
+      "medical",
       "electronics"
-    ]
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 50
+    }
   },
   {
     "name": "Dubnium",
@@ -6102,9 +6627,13 @@
     "block": "d",
     "uses": [
       "industrial",
-      "propulsion",
-      "shielding"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 30,
+      "M": 40
+    }
   },
   {
     "name": "Seaborgium",
@@ -6154,8 +6683,13 @@
     "block": "d",
     "uses": [
       "industrial",
-      "propulsion"
-    ]
+      "medical"
+    ],
+    "classes": {
+      "C": 10,
+      "S": 20,
+      "M": 30
+    }
   },
   {
     "name": "Bohrium",
@@ -6206,8 +6740,14 @@
     "uses": [
       "industrial",
       "medical",
-      "propulsion"
-    ]
+      "propulsion",
+      "shielding"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 2
+    }
   },
   {
     "name": "Hassium",
@@ -6257,9 +6797,14 @@
     "block": "d",
     "uses": [
       "industrial",
-      "propulsion",
-      "shielding"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 2
+    }
   },
   {
     "name": "Meitnerium",
@@ -6310,8 +6855,13 @@
     "uses": [
       "industrial",
       "electronics",
-      "coolants"
-    ]
+      "propulsion"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 1
+    }
   },
   {
     "name": "Darmstadtium",
@@ -6362,7 +6912,12 @@
     "uses": [
       "industrial",
       "medical"
-    ]
+    ],
+    "classes": {
+      "C": 5,
+      "S": 3,
+      "M": 1
+    }
   },
   {
     "name": "Roentgenium",
@@ -6411,10 +6966,13 @@
     },
     "block": "d",
     "uses": [
-      "industrial",
-      "medical",
-      "electronics"
-    ]
+      "industrial"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 50,
+      "M": 90
+    }
   },
   {
     "name": "Copernicium",
@@ -6464,8 +7022,14 @@
     "block": "d",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 30
+    }
   },
   {
     "name": "Nihonium",
@@ -6515,8 +7079,14 @@
     "block": "p",
     "uses": [
       "industrial",
-      "medical"
-    ]
+      "medical",
+      "electronics"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 70
+    }
   },
   {
     "name": "Flerovium",
@@ -6566,8 +7136,14 @@
     "block": "p",
     "uses": [
       "industrial",
-      "electronics"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 5,
+      "S": 30,
+      "M": 65
+    }
   },
   {
     "name": "Moscovium",
@@ -6618,8 +7194,13 @@
     "uses": [
       "propulsion",
       "industrial",
-      "medical"
-    ]
+      "electronics"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 20,
+      "M": 80
+    }
   },
   {
     "name": "Livermorium",
@@ -6669,10 +7250,16 @@
     "block": "p",
     "uses": [
       "industrial",
-      "medical",
+      "energystorage",
       "propulsion",
-      "shielding"
-    ]
+      "shielding",
+      "medical"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 25,
+      "M": 75
+    }
   },
   {
     "name": "Tennessine",
@@ -6722,9 +7309,14 @@
     "block": "p",
     "uses": [
       "industrial",
-      "propulsion",
-      "shielding"
-    ]
+      "electronics",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 50,
+      "S": 30,
+      "M": 20
+    }
   },
   {
     "name": "Oganesson",
@@ -6773,10 +7365,16 @@
     },
     "block": "p",
     "uses": [
+      "energystorage",
       "industrial",
-      "electronics",
-      "propulsion"
-    ]
+      "propulsion",
+      "shielding"
+    ],
+    "classes": {
+      "C": 20,
+      "S": 35,
+      "M": 45
+    }
   },
   {
     "name": "Ununennium",
@@ -6827,7 +7425,13 @@
     "block": "s",
     "uses": [
       "industrial",
-      "energystorage"
-    ]
+      "medical",
+      "propulsion"
+    ],
+    "classes": {
+      "C": 0,
+      "S": 5,
+      "M": 25
+    }
   }
 ]
