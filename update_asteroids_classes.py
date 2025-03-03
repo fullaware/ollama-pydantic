@@ -1,5 +1,5 @@
-# Description: This script uses the Ollama API to classify asteroids based on their names.
 import os
+import logging
 from pydantic import BaseModel, field_validator, ValidationError
 from ollama import Client
 from colorama import Fore, Style, init
@@ -11,7 +11,12 @@ load_dotenv()  # Load environment variables from .env file
 init(autoreset=True)  # Initialize colorama
 
 DEBUG = True  # Set to False to turn off debug printing
+LOGGING = False  # Set to True to enable logging to progress.log
 OVERWRITE_CLASS = False  # Set to True to overwrite existing uses
+
+# Set up logging
+if LOGGING:
+    logging.basicConfig(filename='progress.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 ollama_client = Client(
   host=os.getenv('OLLAMA_URI'), # http://localhost:11434
@@ -23,8 +28,8 @@ class Asteroid(BaseModel):
 
   @field_validator('class_')
   def validate_class(cls, v):
-    if v not in {"C", "S", "M", "O"}:
-      raise ValueError("Class must be one of 'C', 'S', 'M' or 'O'")
+    if v not in {"C", "S", "M"}:
+      raise ValueError("Class must be one of 'C', 'S', or 'M'")
     return v
 
 MONGO_URI = os.getenv('MONGO_URI')
@@ -38,10 +43,16 @@ if MONGO_URI:
 else:
     raise ValueError("MONGO_URI environment variable is not set")
 
+counter = 0  # Initialize counter
+
 for asteroid in data:
     if not OVERWRITE_CLASS and "class" in asteroid:
         if DEBUG:
-            print(Fore.YELLOW + f"Skipping asteroid {asteroid['name']} with existing class")
+            counter += 1
+            message = f"Skipping asteroid {asteroid['name']} with existing class"
+            print(Fore.YELLOW + f"{counter}: " + message)
+            if LOGGING:
+                logging.debug(message)
         continue
 
     while True:
@@ -49,7 +60,7 @@ for asteroid in data:
           messages=[
             {
               'role': 'user',
-              'content': f'Respond in JSON with only one of the following letters C, S, M or O. These are the possible class of asteroid {asteroid["name"]}.',
+              'content': f'Respond in JSON with only one of the following letters C, S, or M. These are the possible class of asteroid {asteroid["name"]}.',
             }
           ],
           model='granite3.1-dense:8b',
@@ -60,9 +71,13 @@ for asteroid in data:
             asteroid_class = validated.class_
 
             # Check if the class is valid
-            if asteroid_class in {"C", "S", "M", "O"}:
+            if asteroid_class in {"C", "S", "M"}:
                 if DEBUG:
-                    print(Fore.GREEN + f"Accepted: {validated}")
+                    counter += 1
+                    message = f"Accepted: {validated}"
+                    print(Fore.GREEN + f"{counter}: " + message)
+                    if LOGGING:
+                        logging.debug(message)
                 
                 # Embed the class in matching JSON objects
                 collection.update_one(
@@ -73,10 +88,18 @@ for asteroid in data:
                 break  # Exit the loop if the class is valid
             else:
                 if DEBUG:
-                    print(Fore.RED + f"Rejected: {validated}")
+                    counter += 1
+                    message = f"Rejected: {validated}"
+                    print(Fore.RED + f"{counter}: " + message)
+                    if LOGGING:
+                        logging.debug(message)
         except ValidationError as e:
             if DEBUG:
-                print(Fore.RED + f"Validation error: {e}")
+                counter += 1
+                message = f"Validation error: {e}"
+                print(Fore.RED + f"{counter}: " + message)
+                if LOGGING:
+                    logging.debug(message)
 
 
 
