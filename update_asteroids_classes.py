@@ -49,8 +49,17 @@ for asteroid in data:
     if not OVERWRITE_CLASS and "class" in asteroid:
         if DEBUG:
             counter += 1
-            message = f"Skipping asteroid {asteroid['name']} with existing class"
+            message = f"Skipping asteroid {asteroid.get('name', 'unknown')} with existing class"
             print(Fore.YELLOW + f"{counter}: " + message)
+            if LOGGING:
+                logging.debug(message)
+        continue
+
+    if 'name' not in asteroid:
+        if DEBUG:
+            counter += 1
+            message = "Error: Asteroid data missing 'name' key"
+            print(Fore.RED + f"{counter}: " + message)
             if LOGGING:
                 logging.debug(message)
         continue
@@ -100,6 +109,8 @@ for asteroid in data:
                 print(Fore.RED + f"{counter}: " + message)
                 if LOGGING:
                     logging.debug(message)
+            # Retry the asteroid
+            continue
 
 
 
