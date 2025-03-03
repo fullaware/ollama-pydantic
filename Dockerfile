@@ -28,11 +28,8 @@ RUN set -ex \
 
 FROM --platform=linux/amd64 python:3.13-slim
 WORKDIR /ollama-pydantic
-COPY --from=builder /ollama-pydantic/requirements /usr/local/lib/python3.12/site-packages
-COPY main.py /ollama-pydantic
-COPY imagegen.py /ollama-pydantic
-COPY /templates /ollama-pydantic/templates/
-COPY /static/favicon.ico /ollama-pydantic/static/favicon.ico
+COPY --from=builder /ollama-pydantic/requirements /usr/local/lib/python3.13/site-packages
+COPY *.py /ollama-pydantic
 EXPOSE 8000
 RUN set -ex \
     # Create a non-root user
