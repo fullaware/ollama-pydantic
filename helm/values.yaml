@@ -1,0 +1,26 @@
+# values.yaml
+image:
+  repository: fullaware/ollama-pydantic
+  tag: latest
+  pullPolicy: Always
+
+# MongoDB configuration
+mongodb:
+  auth:
+    rootPassword: Candy123
+    username: root
+    password: Candy123
+    database: asteroidmining_db
+  primary:
+    persistence:
+      enabled: true
+      storageClass: ""  # Set if a specific storage class is required
+      size: 300Mi
+
+# resources:
+#   limits:
+#     cpu: "500m"
+#     memory: "512Mi"
+#   requests:
+#     cpu: "250m"
+#     memory: "256Mi"

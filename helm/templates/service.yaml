@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-service
+  labels:
+    app: {{ .Release.Name }}-app
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8000 # Adjust to the containerPort defined in deployment.yaml
+  selector:
+    app: {{ .Release.Name }}-app
