@@ -7,7 +7,7 @@ This project includes three Python scripts designed to interact with different d
 # Problem
 ## Asteroids
 
-With a collection of 958524 asteroids, it is important that they have a `class` of either `C` (Carbonaceous),`S` (Silicate),`M` (Metallic) or `O` (Other, unclassified).  I used Pydantic and Ollama to read each asteroid name and update it's document with its classification.
+With a collection of 958524 asteroids, it is important that they have a `class` of either `C` (Carbonaceous),`S` (Silicaceous),`M` (Metallic) or `O` (Other, unclassified).  I used Pydantic and Ollama to read each asteroid name and update it's document with its classification.
 
 ## Elements
 119 Elements in the periodic table, they each needed to be classified for it's possible uses out of `"fuel", "lifesupport", "energystorage", "construction", "electronics", "coolants", "industrial", "medical", "propulsion", "shielding", "agriculture", "mining"`. I used Pydantic and Ollama to read each element and update it's document with its uses.
