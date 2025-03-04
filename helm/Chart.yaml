@@ -26,5 +26,5 @@ appVersion: "1.16.0"
 # Chart.yaml
 dependencies:
   - name: mongodb
-    version: 16.2.1  # Use the appropriate version
+    version: 16.4.5  # Use the appropriate version
     repository: https://charts.bitnami.com/bitnami
