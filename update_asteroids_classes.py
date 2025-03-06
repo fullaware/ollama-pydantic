@@ -75,7 +75,7 @@ for asteroid in data:
           messages=[
             {
               'role': 'user',
-              'content': f'Respond in JSON with only one of the following letters C, S, M or O. These are the possible class of asteroid {asteroid["name"]}.',
+              'content': f'Respond in JSON with only one of the following letters C, S, M or O. These are the possible class of asteroid {asteroid["full_name"]}.',
             }
           ],
           model=OLLAMA_MODEL,
@@ -98,7 +98,7 @@ for asteroid in data:
                 for attempt in range(RETRY_ATTEMPTS):
                     try:
                         collection.update_one(
-                            {"name": asteroid["name"], "class": {"$exists": False}},
+                            {"full_name": asteroid["full_name"], "class": {"$exists": False}},
                             {"$set": {"class": asteroid_class}}
                         )
                         break  # Exit the loop if the update is successful
