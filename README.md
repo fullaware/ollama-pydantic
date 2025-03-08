@@ -55,6 +55,7 @@ This script reads asteroid data from a MongoDB collection, validates the data us
     ```env
     OLLAMA_URI=http://localhost:11434
     MONGO_URI=mongodb://localhost:27017
+    OLLAMA_MODEL=granite3.1-dense:8b
     ```
 
 2. Install the required Python packages:
