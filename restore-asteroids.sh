@@ -1,0 +1,1 @@
+mongorestore -d asteroids --gzip mongodb+srv://admin:password@yourcluster.com/ --archive=asteroids.archive
