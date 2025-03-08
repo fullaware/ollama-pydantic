@@ -1,6 +1,0 @@
-dependencies:
-- name: mongodb
-  repository: https://charts.bitnami.com/bitnami
-  version: 16.4.5
-digest: sha256:3f30d99ccf9cf022463a64f4aa67287b87c11defcb7f7048113c4ce468105b99
-generated: "2025-03-04T15:19:23.686965-05:00"
