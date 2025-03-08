@@ -59,7 +59,7 @@ This script reads asteroid data from a MongoDB collection, validates the data us
 
 2. Install the required Python packages:
     ```sh
-    pip install pydantic ollama colorama pymongo python-dotenv
+    pip install -r requirements.txt
     ```
 
 ### Running the Scripts
