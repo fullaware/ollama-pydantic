@@ -79,7 +79,7 @@ for element in data:
                 # Embed the uses array and classes array in matching JSON objects
                 collection.update_one(
                     {"number": element["number"]},
-                    {"$set": {"uses": element_uses, "classes": [cls.dict(by_alias=True) for cls in element_classes]}}
+                    {"$set": {"uses": element_uses, "classes": [cls.model_dump(by_alias=True) for cls in element_classes]}}
                 )
 
                 break  # Exit the loop if all uses are valid and atomic_number is a non-zero int

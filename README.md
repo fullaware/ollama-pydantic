@@ -7,7 +7,7 @@ This project includes three Python scripts designed to interact with different d
 # Problem
 ## Asteroids
 
-With a collection of 958524 asteroids, it is important that they have a `class` of either `C` (Carbonaceous),`S` (Silicaceous),`M` (Metallic) or `O` (Other, unclassified).  I used Pydantic and Ollama to read each asteroid name and update it's document with its classification.
+With a collection of [958524 asteroids, thanks to https://www.kaggle.com/datasets/sakhawat18/asteroid-dataset](https://www.kaggle.com/datasets/sakhawat18/asteroid-dataset), it is important for my usecase that they have a `class` of either `C` (Carbonaceous),`S` (Silicaceous),`M` (Metallic) or `O` (Other, unclassified).  I used Pydantic and Ollama to read each asteroid name and update it's document with its classification.
 
 ## Elements
 119 Elements in the periodic table, they each needed to be classified for it's possible uses out of `"fuel", "lifesupport", "energystorage", "construction", "electronics", "coolants", "industrial", "medical", "propulsion", "shielding", "agriculture", "mining"`. I also wanted to show the likelyhood of each element appearing in each class of asteroid [`C`, `S` and `M`].  I used Pydantic and Ollama to read each element and update it's document with its uses and classes.
@@ -26,8 +26,10 @@ This script reads element data from a JSON file, validates the data using Pydant
 - Debugging support with color-coded output using `colorama`.
 
 ### 2. `update_element_uses_mdb.py`
+![update_element_uses_mdb](update_element_uses_mdb.png)
+This script reads each of the 119 elements data from a MongoDB collection, validates the data using Pydantic models, and updates the MongoDB documents with validated uses and percentage of likelyhood of each element appearing in C, S, M class asteroids.
 
-This script reads element data from a MongoDB collection, validates the data using Pydantic models, and updates the MongoDB documents with validated uses and classes for each element.
+The expectation is that the AI, depending on model, may have a hard time with following structured responses.  This is where we retry the query with the AI until we can parse it's response as being "valid" using Pydantic.  The `Rejected` results you see in the screenshot represent where the AI responded with it's own usecase (that I will certainly consider), but my objective is to be able to group elements by the above mentioned usecases.  In this case it took 3 failed attempts before the AI finally responded with the valid answer for Chlorine.
 
 #### Capabilities:
 - Connects to a MongoDB database using a URI from environment variables.
