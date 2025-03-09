@@ -6,7 +6,7 @@ Asteroid mining is hard, it is harder if you cannot find what you are looking fo
 How much is an asteroid worth?
 ```
 
-Based on it's class, it will likely contain certain elements.  Some metallic class asteroids are known to have high concentrations of [platinum group metals](https://en.wikipedia.org/wiki/Platinum_group). Platinums value is over [$900+ per oz](https://finance.yahoo.com/quote/PL=F/)!
+Based on it's class, it will likely contain certain elements.  Some M (Metallic) class asteroids are known to have high concentrations of [platinum group metals](https://en.wikipedia.org/wiki/Platinum_group). Platinums value is over [$900+ per oz](https://finance.yahoo.com/quote/PL=F/)!  To keep life simple I will be measuring all mining quantities in kilograms.  35.27 oz in 1 kg. $900 x 35.27 oz = $31,743 per kg. It's trading far above $900 at this moment so let's round up to $32k per 1 kg of Platinum.
 
 ### Classifying Asteroids
 
@@ -49,11 +49,35 @@ For instance `Hydrogen` now has the following fields:
 
 # Let's go hunting!
 
-- Find the asteroid(s) closest to us measured in [Astronomical Units](https://en.wikipedia.org/wiki/Astronomical_unit)
-- Based on class, estimate it's value based on it's percentage of elements
+- Find the asteroid(s) closest to Earth measured in [Astronomical Units](https://en.wikipedia.org/wiki/Astronomical_unit)
+- Estimate it's value
 - Flight plan - estimate the total number of days to intersect, days to establish site, days to fill cargo to capacity, days to return (considering additional mass)
 - Based on the value of the elements x capacity of cargo = mission value
 
-Key to finding anything in space is finding it's relation to something significant, like our SUN. `moid` is the [minimum orbital intersection distance measured in Astronomical Units](https://en.wikipedia.org/wiki/Minimum_orbit_intersection_distance) aka closest distance the asteroid is projected to be to Earth.  
+## Where are you? [AU]
+Key to finding anything in space is finding it's relation to something significant, like our SUN. The distance from Earth to the Sun is 1 Astronomical Unit. Each asteroid has a `moid` field which stands for [minimum orbital intersection distance measured in Astronomical Units](https://en.wikipedia.org/wiki/Minimum_orbit_intersection_distance) aka closest distance between the asteroid and Earth.  
 
 For instance `Ceres` has a `moid` of `1.59478` AU.  1 AU is 149,597,871 km, so `Ceres` is 238,575,692 km from Earth at its closest point.
+
+With the absolute latest in human engineering it's possible to get from [Earth to Mars in 45 days](https://www.iflscience.com/nuclear-thermal-propulsion-reactor-fuel-that-could-take-humans-to-mars-tested-at-nasa-facility-77719). The distance from Earth to Mars is 0.52 AU or 78,340,000 km. `78,340,000 km / 45 days =
+1,740,889 km per day or 72,537 km per hour`. 
+
+This means it would take us 137 days to get to the asteroid `Ceres`.
+
+`238,575,692 km to Ceres / 1,740,889 km per day = 137 days`
+
+## Mine, all mine
+Due to `Ceres` size, it is fair to say that multiple mining sites could exist over this 939.4 km diameter asteroid.  It's mass is estimated to be 938,390,000,000,000,000,000 kg.
+
+## Dig it
+
+We are going to estimate our mining ship can extract 8,800 kg of material per hour based on [published surface mining data](https://www.eia.gov/coal/annual/pdf/tableES2.pdf).  In mining, **gangue** is the commercially worthless material that surrounds, or is closely mixed with, a wanted mineral in an ore deposit.  For example, say you have 10 tonnes of rock you have mined for copper that has an ore grade of 10%. This means you only get 1 tonne of copper and 9 tonnes of gangue that you have to separate and get rid of (10% copper ore would be very high grade).
+
+## Logistics and costs
+The [Falcon Heavy](https://en.wikipedia.org/wiki/Falcon_Heavy) can lift 9,200 kg into space. We will be rounding that up to 10,000 kg. That's $320 million dollars in platinum.
+
+The Falcon Heavy has 2 costs models; 
+- Reusable: US $97 million
+- Expendable: US$150 million
+
+Let's look at this 2 ways.  If your cargo makes it back, great (minus several million in repairs)!  If it doesn't, it's going to cost $150 million to try again.
