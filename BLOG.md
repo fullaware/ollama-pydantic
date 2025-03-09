@@ -80,4 +80,6 @@ The Falcon Heavy has 2 costs models;
 - Reusable: US $97 million
 - Expendable: US$150 million
 
-Let's look at this 2 ways.  If your cargo makes it back, great (minus several million in repairs)!  If it doesn't, it's going to cost $150 million to try again.
+If your ship + cargo makes it back, great (minus several million in repairs)!  If it doesn't, it's going to cost $150 million to try again.
+
+
