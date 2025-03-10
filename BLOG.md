@@ -72,7 +72,7 @@ Based on this mass we are going to estimate that all other asteroids have a simi
 
 ## Dig it
 
-We are going to estimate our mining ship can extract 10,000 kg of material per hour or 240,000 kg of material per day based on [published surface mining data](https://www.eia.gov/coal/annual/pdf/tableES2.pdf).  In mining, **gangue** is the commercially worthless material that surrounds, or is closely mixed with, a wanted mineral in an ore deposit.  For example, say you have 10,000 kg of rock you have mined for platinum that has an ore grade of 10%. This means you only get 1,000 kg of platinum and 9,000 kg of gangue that you have to separate and get rid of (10% platinum ore would be very high grade). Ceres would have 93,839,000,000,000,000,000 kg of actual elements if we assume high grade ore occurance.
+We are going to estimate our mining ship can extract 10,000 kg of material per hour or 240,000 kg of material per day based on [published surface mining data](https://www.eia.gov/coal/annual/pdf/tableES2.pdf).  In mining, **gangue** is the commercially worthless material that surrounds, or is closely mixed with, a wanted mineral in an ore deposit.  For example, say you have 10,000 kg of rock you have mined for platinum that has an ore grade of 10%. This means you only get 1,000 kg of platinum and 9,000 kg of gangue that you have to separate and get rid of (10% platinum ore would be very high grade). Ceres would have 93,839,000,000,000,000,000 kg of actual elements if we assume high grade ore occurance, or $3,002,848,000,000,000,000,000 if all elements are similar in value to Platinum.  Ceres could be worth up to three sextillion, two quintillion, eight hundred forty-eight quadrillion dollars.
 
 > 24,000 kg per day of useful elements if all goes well.
 
