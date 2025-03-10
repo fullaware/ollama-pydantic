@@ -85,11 +85,11 @@ This script reads asteroid data from a MongoDB collection, validates the data us
 ## Debugging
 
 - Set `DEBUG = True` in the scripts to enable debug printing with color-coded output.
-- Set `OVERWRITE_CLASS = True` in [update_asteroids_classes.py](http://_vscodecontentref_/0) to overwrite existing class fields.
+- Set `OVERWRITE_CLASS = True` in [update_asteroids_classes.py]() to overwrite existing class fields.
 
 ## Notes
 
-- Ensure that the MongoDB server is running and accessible via the URI specified in the [.env](http://_vscodecontentref_/1) file.
-- The [elements.json](http://_vscodecontentref_/2) file should be present in the project root directory for [update_element_uses.py](http://_vscodecontentref_/3).
+- Ensure that the MongoDB server is running and accessible via the URI specified in the [.env]() file.
+- The [elements.json]() file should be present in the project root directory for [update_element_uses.py]().
 
 This README provides an overview of the capabilities and usage of the scripts in this project. For more detailed information, refer to the individual script files.
